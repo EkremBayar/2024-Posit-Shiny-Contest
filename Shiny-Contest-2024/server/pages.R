@@ -21,7 +21,7 @@ observeEvent(input$sort_submit,{
       df %>% select(Name, Team, date_of_birth, height, foot),
       by = c("Player" = "Name")
     ) %>% 
-    mutate(Player = paste0(Player," | ", Team, " | ",  str_sub(date_of_birth, 3,4), "' | ", str_remove_all(height, "\\."), " | ", str_sub(foot, 1, 1)))
+    mutate(Player = paste0(Player," | ", Team, " | ",  str_sub(date_of_birth, 3,4), "' | ", as.integer(height*100), " | ", str_sub(foot, 1, 1)))
   
   pos_gk <- temp %>% filter(Position == "GK") %>% pull(Player)
   pos_lb <- temp %>% filter(Position == "LB") %>% pull(Player)

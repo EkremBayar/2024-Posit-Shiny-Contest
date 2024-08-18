@@ -26,7 +26,10 @@ observe({
 observeEvent(input$player_filter, {
   selected_pos <- position_selection(input$position_filter)
   rvList[[selected_pos]] <- input$player_filter
-
 })
 
-
+observe({
+  req(input$position_filter)
+  selected_pos <- position_selection(input$position_filter)
+  if(length(input$player_filter) == 0){rvList[[selected_pos]] <- NULL}
+})

@@ -1,0 +1,67 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Sayfa kaydırmasını engeller */
+}
+
+.shiny-plot-output {
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+#homeland_page, #team_builder_page {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Tam sayfa yüksekliği */
+    background-image: url('images/euro2024.jpg');
+    background-size: cover; /* Görselin tüm sayfayı kaplamasını sağlar */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Görselin sabit kalmasını sağlar */
+    background-position: center; /* Görselin ortalanmasını sağlar */
+}
+
+
+#team_builder_page {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Tam sayfa yüksekliği */
+    background-image: url('images/ardaguler.jpg');
+    background-size: cover; /* Görselin tüm sayfayı kaplamasını sağlar */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Görselin sabit kalmasını sağlar */
+    background-position: center; /* Görselin ortalanmasını sağlar */
+}
+
+#final_page {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Tam sayfa yüksekliği */
+    background-image: url('images/spain.jpg');
+    background-size: cover; /* Görselin tüm sayfayı kaplamasını sağlar */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Görselin sabit kalmasını sağlar */
+    background-position: center; /* Görselin ortalanmasını sağlar */
+}
+
+.centered-plot {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Ortada ve aşağıda hizalama */
+  height: 100vh;
+  margin-bottom: 20px; /* İhtiyaca göre ayarlanabilir */
+}
+
+
+.hover-icon {
+  color: white;
+  background-color: green;
+  border-radius: 50%;
+  padding: 5px;
+}
+.hover-icon:hover {
+  color: green;
+  background-color: white;
+  cursor: pointer;
+}
